@@ -1,8 +1,12 @@
 import 'lib-flexible';
-import ReactDom from 'react-dom';
+import ReactDOM from 'react-dom/client';
+
 import 'reset-css';
-import App from './App'
-ReactDom.render(
-    <App/>,
-    document.getElementById('root')
+import MoodsRecorder from './view/MoodsRecorder.js'
+
+
+const rootNode = ReactDOM.createRoot(document.getElementById('root'));
+
+rootNode.render(
+    <MoodsRecorder/>,
 )
