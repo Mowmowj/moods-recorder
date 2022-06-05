@@ -1,5 +1,6 @@
 import "./UserInfo.scss";
 import Avatar from "../../assets/avatar.png";
+import { averageMood ,UserInfo as user } from "../../configs/mockData";
 
 const UserInfo = () => { 
 	return (
@@ -7,10 +8,10 @@ const UserInfo = () => {
 			<div className="user">
 				<div className="user-info">
 					<img className="user-avatar" src={Avatar} alt="" />
-					<span className="user-name">李强</span>
+					<span className="user-name">{ user.name }</span>
 				</div>
                 <div className="user-mood">
-				    <span>88</span>
+				    <span>{averageMood}</span>
                 </div>
 				<span className="user-average">周平均心情指数</span>
 			</div>

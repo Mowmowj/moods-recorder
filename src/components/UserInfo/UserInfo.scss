@@ -27,6 +27,7 @@ $PingFangHKFont: "PingFang HK";
 		.user-info {
 			display: flex;
 			align-items: center;
+            justify-content:center;
 
 			.user-avatar {
 				width: 36px;
@@ -43,6 +44,7 @@ $PingFangHKFont: "PingFang HK";
 		}
 
 		.user-mood {
+            justify-content: center;
 			font-family: $NunitoFont;
 			font-weight: 800;
 			font-size: 72px;

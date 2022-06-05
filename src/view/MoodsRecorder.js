@@ -2,7 +2,7 @@ import Header from "../components/Header/Header.js";
 import UserInfo from "../components/UserInfo/UserInfo";
 import MoodsStatus from "../components/MoodsStatus/MoodsStatus";
 import MobileStatus from "../components/MobileStatus/MobileStatus";
-import { weekMoods } from "../configs/dayVariables";
+import { weekMoods } from "../configs/mockData.js";
 import './MoodsRecorder.scss'
 
 
