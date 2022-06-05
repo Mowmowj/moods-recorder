@@ -10,7 +10,7 @@ const UserInfo = () => {
 					<span className="user-name">李强</span>
 				</div>
                 <div className="user-mood">
-				    <span >88</span>
+				    <span>88</span>
                 </div>
 				<span className="user-average">周平均心情指数</span>
 			</div>
