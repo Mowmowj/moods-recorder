@@ -1,0 +1,18 @@
+.header {
+	padding: 27.67px 18.5px 0 18.5px;
+	margin-bottom: 22px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	.header__arrow {
+		width: 23.5px;
+		height: 17px;
+	}
+
+	.header__title {
+		font-weight: 500;
+		font-size: 20px;
+		font-family: "PingFang HK";
+	}
+}

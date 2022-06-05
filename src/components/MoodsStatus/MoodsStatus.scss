@@ -1,0 +1,167 @@
+.list {
+	display: flex;
+	justify-content: space-between;
+	height: 279px;
+	margin: 0 11px 0 12px;
+	//条形图进入特效
+	@keyframes showDay {
+		0% {
+			height: 0;
+			visibility: hidden;
+		}
+		100% {
+            border: 3px solid #FFE9D5;
+			visibility: visible;
+		}
+	}
+	.vigor {
+        box-sizing: content-box;
+		width: 44px;
+        border: 3px solid white;
+		border-radius: 30px;
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-self: flex-end;
+		visibility: hidden;
+		animation: showDay 1s forwards;
+
+		&-unknownAvatar {
+			background: #cfcfcf;
+			&__active {
+				background: #cfcfcf;
+			}
+		}
+		//分数
+		@keyframes showScore {
+			0% {
+				opacity: 0;
+			}
+			100% {
+				opacity: 100;
+			}
+		}
+
+		&-score {
+			margin-top: 12px;
+			font-family: "Nunito";
+			font-style: normal;
+			font-weight: 700;
+			font-size: 24px;
+			color: #ffffff;
+			opacity: 0;
+			animation: showScore 3s forwards;
+		}
+
+		//笑脸特效
+		@keyframes showSmile {
+			0% {
+				transform: scale(0, 0);
+			}
+			100% {
+				transform: scale(1, 1);
+			}
+		}
+
+		&-face {
+			width: 36px;
+			height: 36px;
+			position: absolute;
+			bottom: 4px;
+			animation: showSmile 2s forwards;
+		}
+		//星期特效
+		@keyframes showWeek {
+			0% {
+				opacity: 0;
+			}
+			100% {
+				opacity: 100;
+			}
+		}
+		&-date {
+			opacity: 0;
+			animation: showWeek 1s forwards;
+			font-family: "PingFang HK";
+			font-style: normal;
+			font-weight: 500;
+			font-size: 18px;
+			color: #2d2f33;
+			position: absolute;
+			bottom: -53px;
+			display: inline-block;
+			width: 36px;
+			height: 36px;
+			line-height: 36px;
+			border-radius: 8px;
+			text-align: center;
+			&__day {
+				position: relative;
+			}
+
+			&__today {
+				background: #2d2f33;
+				color: #ffffff;
+			}
+
+			&__soHappy {
+				color: #ff823c;
+				background: #ffffff;
+				box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+				border-radius: 8px;
+			}
+
+			&__happy {
+				color: #52c873;
+				background: #ffffff;
+				box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+				border-radius: 8px;
+			}
+		}
+	}
+	.vigor-create {
+		animation: unset;
+		visibility: visible !important;
+		animation-delay: 0s !important;
+	}
+	.vigor-soHappy {
+		background: #ff823c;
+	}
+	@keyframes showSoHappyActive {
+		0% {
+			background: #ff823c;
+		}
+		100% {
+			visibility: visible;
+			background-image: linear-gradient(180deg, #ffa14a 35.42%, #ffcc4a 100%);
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+			border: 3px solid #dcffd6;
+		}
+	}
+	.vigor-soHappy__active {
+		animation: showSoHappyActive 1s forwards;
+	}
+
+	.vigor-happy {
+		background: #52c873;
+	}
+    @keyframes showHappyActive {
+		0% {
+    		background: #52c873;
+		}
+		100% {
+			visibility: visible;
+			background: linear-gradient(180deg, #42f373 42.71%, #a1fd44 100%);
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+			border: 3px solid #dcffd6;
+		}
+	}
+	.vigor-happy__active {
+		animation: showHappyActive 1s forwards;
+	}
+}
+@for $i from 1 through 7 {
+	.list div:nth-child(#{$i}n) {
+		animation-delay: #{$i * 0.2}s;
+	}
+}

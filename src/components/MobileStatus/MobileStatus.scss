@@ -1,0 +1,32 @@
+.mobile{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14.33px 12px 0 21px;
+    .time-wrapper{
+        .time{
+            width: 30px;
+            height: 12px;
+        }
+    }
+    
+    .right-status{
+        .signal{
+            width: 18.77px;
+            height: 10.67px;
+            margin-left: 5px;
+        }
+        .wifi{
+            width: 16.93px;
+            height: 11px;
+            margin-left: 5px;
+
+        }
+        .battery{
+            width: 24.33px;
+            height: 11.33px;
+            margin-left: 5px;
+
+        }
+    }
+}
