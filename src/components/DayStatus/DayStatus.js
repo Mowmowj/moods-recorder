@@ -2,7 +2,6 @@ import { judgeIsToday } from "../../configs/dayVariables.js";
 import React, { useState, useEffect } from "react";
 
 const DayStatus = props => {
-
 	//Judgement
 	const isToday = judgeIsToday(props.day);
     //判断分数是否合法是否是正整数  若非法给默认值30高度
